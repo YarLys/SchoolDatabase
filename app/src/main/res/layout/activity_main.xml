@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV1"
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add"></Button>
+
+    <!--<fragment
+        android:id="@+id/pupilsList"
+        android:name="com.example.schooldatabase.PupilsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></fragment>-->
+
+
+    <!--<Button
+        android:id="@+id/B_OPEN"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Открыть журнал"
+        android:textSize="30dp">
+    </Button>
+    <Button
+        android:id="@+id/B_CREATE"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Создать новый"
+        android:textSize="30dp">
+    </Button>-->
+
+</LinearLayout>
