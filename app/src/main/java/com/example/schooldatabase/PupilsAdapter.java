@@ -53,8 +53,10 @@ public class PupilsAdapter extends RecyclerView.Adapter<PupilsAdapter.PupilHolde
 
             Button button = itemView.findViewById(R.id.Delete);
             button.setOnClickListener(v -> {
-                adapter.learners.remove(getAdapterPosition());
-                adapter.notifyItemRemoved(getAdapterPosition());
+                if (getAdapterPosition() >= 0) {  // защита от дурака (если спамить del, то в моменте будет индекс -1 -> вылет за границы массива)
+                    adapter.learners.remove(getAdapterPosition());
+                    adapter.notifyItemRemoved(getAdapterPosition());
+                }
             });
         }
         public PupilHolder linkAdapter(PupilsAdapter adapter) {

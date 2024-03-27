@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -30,10 +31,19 @@ public class PupilsList extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.RV1);
         ArrayList<Learner> learners = new ArrayList<>();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext())); // ???
         learners.add(new Learner("Test", "+2131231", 123123, null));
         PupilsAdapter adapter = new PupilsAdapter(learners);
         recyclerView.setAdapter(adapter);
 
+        view.findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                learners.add(new Learner(dataFIO[counter%3], dataPhone[counter%3], dataCardID[counter%3], null));
+                counter++;
+                adapter.notifyItemInserted(learners.size()-1);
+            }
+        });
 
         return view;
     }

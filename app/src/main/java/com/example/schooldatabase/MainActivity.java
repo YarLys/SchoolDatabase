@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*PupilsList pupilsList = new PupilsList();
+        PupilsList pupilsList = new PupilsList();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
         if (!pupilsList.isAdded()) {
             ft.add(R.id.pupilsList, pupilsList);
         }
-        ft.commit();*/
+        ft.commit();
 
-        RecyclerView recyclerView = findViewById(R.id.RV1);
+        /*RecyclerView recyclerView = findViewById(R.id.RV1);
         ArrayList<Learner> learners = new ArrayList<>();
         //learners.add(new Learner("Test", "+2131231", 123123, null));
         recyclerView.setLayoutManager(new LinearLayoutManager(this)); // ???
@@ -45,6 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 counter++;
                 adapter.notifyItemInserted(learners.size()-1);
             }
-        });
+        });*/
     }
 }
